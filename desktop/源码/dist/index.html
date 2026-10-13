@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5fa"><meta name="description" content="记账喵：本地优先的生活费记账伙伴，预算、账单与温柔陪伴。">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./assets/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <title>记账喵 · 今天也要好好记帐喵</title><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home"><span class="brand-mark">✳</span><span>记账喵<small>MEOW LEDGER</small></span></a>
+    <div class="nav-label">我的生活账本</div>
+    <nav aria-label="主导航" class="desktop-nav">
+      <button data-route="home"><span data-icon="home"></span>首页概览</button>
+      <button data-route="bills"><span data-icon="receipt"></span>我的账单</button>
+      <button data-route="settings"><span data-icon="settings"></span>偏好设置</button>
+    </nav>
+    <div class="sidebar-note"><span class="tiny-flower">✧</span><strong>每一笔，都是生活。</strong><p>慢慢记录，轻松安排。<br>和搭子一起照顾小日常。</p><div class="note-line"></div></div>
+    <div class="local-label"><span class="status-dot"></span>本机账本 · 数据不自动同步</div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="topbar-label">我的小日常 <span>/</span> <b id="breadcrumb">首页</b></span><div class="topbar-right"><span class="engine-pill" id="engine-status">本地优先</span><span class="avatar">我</span></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="page-footer"><span>一点点记录，把日子过成喜欢的样子。</span><span>记账喵 <span class="footer-star">✳</span></span></footer>
+  </div>
+  <nav class="mobile-nav" aria-label="手机导航"><button data-route="home"><span data-icon="home"></span><span>首页</span></button><button data-route="bills"><span data-icon="receipt"></span><span>账单</span></button><button data-route="settings"><span data-icon="settings"></span><span>设置</span></button></nav>
+  <button class="mobile-add" data-action="add" aria-label="记一笔"><span data-icon="plus"></span></button>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

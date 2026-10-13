@@ -1,0 +1,10 @@
+{
+  "apk": "记账喵-1.0.0-Android.apk",
+  "bytes": 2827800,
+  "MiB": 2.7,
+  "sha256": "81099b6f379c27613111fa1ecf575e647b29f76a9d7b21a33f785ffa117f5df3",
+  "minAndroid": "8.0",
+  "targetSdk": 35,
+  "signed": true,
+  "deviceTested": false
+}

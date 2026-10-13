@@ -1,0 +1,10 @@
+{
+  "id": "./", "name": "记账喵 · 生活费记账", "short_name": "记账喵",
+  "description": "本地优先的生活费记账与角色陪伴应用",
+  "lang": "zh-CN", "start_url": "./", "scope": "./", "display": "standalone",
+  "background_color": "#f6f5fa", "theme_color": "#f6f5fa",
+  "icons": [
+    {"src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

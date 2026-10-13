@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Meow Ledger, O=Meow Ledger Project, C=CN
+Signer #1 certificate SHA-256 digest: a855238cc397151b0b331915558d0136360c8bda7680725f08f908fe39ef86c3
+Signer #1 certificate SHA-1 digest: 2e579489598b9db6bcd3cf981aa22c0adbfc04b5
+Signer #1 certificate MD5 digest: c19c91e502284f448dbce4872ad2daca
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 685c742b5b93bec64280e26a163754f06efb18bbd8ffb576e5e184b261c8e1a6
+Signer #1 public key SHA-1 digest: 623dfb962682cd81082e24b14374c656e9531ce7
+Signer #1 public key MD5 digest: fca380559ffb60c87981dbf0485d2854
