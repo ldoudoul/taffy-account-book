@@ -24,6 +24,7 @@ Thumbs.db
 **/安装包/
 *.apk
 *.exe
+!distribution/windows/taffy-account-book-1.0.0-windows-x64-setup.exe
 *.zip
 *.spec
 *.sqlite3*

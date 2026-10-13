@@ -6,6 +6,14 @@
 
 > 首版为本地优先：手机、浏览器和 Windows 的账本独立，不自动同步。跨端转移使用 JSON 备份。
 
+## Windows 一键下载
+
+**[下载 Windows .exe 安装包（1.0.0，约16.0MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.0.0/taffy-account-book-1.0.0-windows-x64-setup.exe)**
+
+[发布页与全部下载文件](https://github.com/ldoudoul/taffy-account-book/releases/latest) · [SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.0.0/SHA256SUMS.txt)
+
+支持 Windows 10/11 x64。下载后双击安装，从桌面启动；系统需要 WebView2 和 .NET Framework 4.6.2 以上，使用者无需安装Python。详细安装、备份和运行依赖见下方文档。
+
 ## 功能
 
 - 每月独立生活费预算，剩余预算 = 当月预算 − 当月支出；收入单独统计。
@@ -111,7 +119,7 @@ Windows 本机安装、启动、卸载、实际自启动开关、单实例、记
 
 Android 首版 APK 约 2.7 MiB，编译、v2/v3 签名、对齐、实际打包资源检查通过；界面和桥接回调仅做了隔离浏览器模拟，**尚未安卓真机或模拟器安装运行测试**。手机公开 PWA 地址、真机离线/键盘/文件选择及 Windows 实际重启仍待验证。
 
-详细证据：[Windows 验证](docs/windows-verification.md)、[Android 验证](docs/android-verification.md)。仓库不包含用户账本、测试导出数据、私钥或大型工具；本地安装包不作为 Git 源码提交。
+详细证据：[Windows 验证](docs/windows-verification.md)、[Android 验证](docs/android-verification.md)。仓库不包含用户账本、测试导出数据、私钥或大型工具；已验证的Windows安装包在distribution/windows保留，用于自动发布至GitHub Releases。
 
 ## 文档
 
