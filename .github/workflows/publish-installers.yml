@@ -1,0 +1,45 @@
+name: Publish Windows and Android installers
+
+on:
+  push:
+    tags: [v1.1.1]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: installers-v1.1.1
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Download and verify tested packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/distribution/1.1.1"
+          for ASSET in taffy-account-book-1.1.1-windows-x64-setup.exe taffy-account-book-1.1.1-android.apk SHA256SUMS.txt release-notes.md; do
+            curl --fail --location --retry 3 --output "$ASSET" "$BASE/$ASSET"
+          done
+          sha256sum --check SHA256SUMS.txt
+      - name: Publish latest release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v1.1.1 >/dev/null 2>&1; then
+            echo 'Release already exists; refusing to replace existing assets.'
+            exit 1
+          fi
+          gh release create v1.1.1 \
+            taffy-account-book-1.1.1-windows-x64-setup.exe \
+            taffy-account-book-1.1.1-android.apk SHA256SUMS.txt \
+            --verify-tag --title '永雏塔菲记账本 1.1.1 · Windows 与 Android' \
+            --notes-file release-notes.md --latest

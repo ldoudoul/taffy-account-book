@@ -8,20 +8,22 @@
 
 ## interactivity 分支进度 · 1.1.1
 
-已完成白粉界面升级、四种上半身表情、七种道具互动、可关闭合成音效，以及 Windows/Android/PWA 原图图标更新。16 项 Python 测试、Python/JS 一致性及浏览器互动检查通过；新版 EXE/APK 已在本地生成。安卓真机与音效听感尚待验收。
+已完成白粉界面升级、四种上半身表情、七种道具互动、可关闭合成音效，以及 Windows/Android/PWA 原图图标更新。16 项 Python 测试、Python/JS 一致性及浏览器互动检查通过；新版 EXE/APK 已构建并提供 Release 下载。安卓真机与音效听感尚待验收。
 
 - [界面与互动升级说明](docs/1.1.0-界面互动升级.md)
 - [两端图标更新说明](docs/1.1.1-图标更新.md)
 - [安装包及图标校验记录](docs/1.1.1-安装包校验.json)
 - [五个区块的任务进度](docs/tasks/)
 
-本分支源码版本为 **1.1.1**；下方公开 Release 安装包目前为 **1.0.0**。新版安装包本次未发布到 Release。旧版三份 PDF 为 1.0.0 资料，新增 Markdown 记录新版变更。
+本分支源码版本为 **1.1.1**；下方公开 Release 提供 **1.1.1** Windows 与 Android 安装包。旧版三份 PDF 为 1.0.0 资料，新增 Markdown 记录新版变更。
 
-## Windows 一键下载
+## Windows 与 Android 下载
 
-**[下载 Windows .exe 安装包（1.0.0，约16.0MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.0.0/taffy-account-book-1.0.0-windows-x64-setup.exe)**
+**[下载 Windows .exe 安装包（1.1.1，约18.87MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/taffy-account-book-1.1.1-windows-x64-setup.exe)**
 
-[发布页与全部下载文件](https://github.com/ldoudoul/taffy-account-book/releases/latest) · [SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.0.0/SHA256SUMS.txt)
+**[下载安卓 .apk 安装包（1.1.1，约5.02MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/taffy-account-book-1.1.1-android.apk)**
+
+[发布页与全部下载文件](https://github.com/ldoudoul/taffy-account-book/releases/latest) · [SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/SHA256SUMS.txt)
 
 支持 Windows 10/11 x64。下载后双击安装，从桌面启动；系统需要 WebView2 和 .NET Framework 4.6.2 以上，使用者无需安装Python。详细安装、备份和运行依赖见下方文档。
 

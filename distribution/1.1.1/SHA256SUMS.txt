@@ -1,0 +1,2 @@
+0ca9a7e493752bc327dbe6cf512789234d3689834c5238c9a30109be0d893f3e  taffy-account-book-1.1.1-windows-x64-setup.exe
+f5e0ab1938c9c5447cd2a261105f338fd88d63be3dc0fe96b79dcc5c36cfd79e  taffy-account-book-1.1.1-android.apk
