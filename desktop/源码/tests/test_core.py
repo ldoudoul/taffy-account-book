@@ -17,6 +17,15 @@ class LedgerTests(unittest.TestCase):
     def setUp(self):
         self.state = core.apply_action(core.empty_state(), 'budget', {'month': '2026-10', 'value': '100.00'})
 
+    def test_sound_setting_migrates_and_validates(self):
+        old = core.empty_state()
+        old['settings'].pop('sounds')
+        self.assertFalse(core.validate_state(old)['settings']['sounds'])
+        changed = core.apply_action(old, 'settings', {'sounds': True})
+        self.assertTrue(changed['settings']['sounds'])
+        with self.assertRaises(ValueError):
+            core.apply_action(old, 'settings', {'sounds': 'yes'})
+
     def test_money_and_input(self):
         self.assertEqual(core.cents('0.01'), 1)
         self.assertEqual(core.cents('10.10'), 1010)

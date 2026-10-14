@@ -14,7 +14,7 @@ import core
 from storage import LedgerStore
 from windows_settings import read_startup, set_startup
 
-VERSION = '1.0.0'
+VERSION = '1.1.1'
 
 
 class DesktopAPI:

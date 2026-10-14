@@ -1,0 +1,18 @@
+{
+  "iconChecks": {
+    "Windows程序": "7 个尺寸图标资源与新 ICO 一致",
+    "Windows安装包": "7 个尺寸图标资源与新 ICO 一致",
+    "Android": "APK 图标可见像素与新 PNG 一致；签名和 zipalign 通过"
+  },
+  "packages": {
+    "记账喵-1.1.1-Android.apk": {
+      "bytes": 5265147,
+      "sha256": "f5e0ab1938c9c5447cd2a261105f338fd88d63be3dc0fe96b79dcc5c36cfd79e"
+    },
+    "记账喵-1.1.1-Windows-x64-安装.exe": {
+      "bytes": 19790766,
+      "sha256": "0ca9a7e493752bc327dbe6cf512789234d3689834c5238c9a30109be0d893f3e"
+    }
+  },
+  "androidDeviceTested": false
+}

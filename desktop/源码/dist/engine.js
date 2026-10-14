@@ -1,7 +1,7 @@
 /* Offline companion to core.py. Same integer-cent contract, parity tested. */
 export const EXPENSE = ['餐饮','交通','购物','娱乐','学习','住房','医疗','其他'];
 export const INCOME = ['生活费','工资','兼职','红包','其他'];
-export const DEFAULTS = {currency:'CNY',animations:true,character:true,prompts:true};
+export const DEFAULTS = {currency:'CNY',animations:true,character:true,prompts:true,sounds:false};
 export const emptyState = () => ({version:1,transactions:[],budgets:{},settings:{...DEFAULTS}});
 const LIMIT=999999999999;
 export function cents(value) {
@@ -33,7 +33,7 @@ export function validateState(s){
   if(!s.budgets||typeof s.budgets!=='object'||Array.isArray(s.budgets)||Object.keys(s.budgets).length>12000)throw Error('预算格式无效');
   const budgets={};for(const [k,v]of Object.entries(s.budgets)){month(k);budgets[k]=money(v);}
   if(s.settings!==undefined&&(!s.settings||typeof s.settings!=='object'||Array.isArray(s.settings)))throw Error('设置格式无效');
-  const settings={...DEFAULTS};for(const k of ['animations','character','prompts']){if(k in(s.settings||{})){if(typeof s.settings[k]!=='boolean')throw Error('设置开关格式无效');settings[k]=s.settings[k];}}
+  const settings={...DEFAULTS};for(const k of ['animations','character','prompts','sounds']){if(k in(s.settings||{})){if(typeof s.settings[k]!=='boolean')throw Error('设置开关格式无效');settings[k]=s.settings[k];}}
   const currency=s.settings?.currency||'CNY';if(!['CNY','USD','EUR','JPY'].includes(currency))throw Error('币种无效');settings.currency=currency;
   return {version:1,transactions:ts,budgets,settings};
 }

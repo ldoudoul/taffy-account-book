@@ -17,7 +17,7 @@ from uuid import uuid4
 EXPENSE = ['餐饮', '交通', '购物', '娱乐', '学习', '住房', '医疗', '其他']
 INCOME = ['生活费', '工资', '兼职', '红包', '其他']
 LIMIT = 999_999_999_999
-DEFAULT_SETTINGS = dict(currency='CNY', animations=True, character=True, prompts=True)
+DEFAULT_SETTINGS = dict(currency='CNY', animations=True, character=True, prompts=True, sounds=False)
 
 
 def empty_state():
@@ -96,7 +96,7 @@ def validate_state(value):
     if not isinstance(raw_settings, dict):
         raise ValueError('设置格式无效')
     settings = DEFAULT_SETTINGS.copy()
-    for k in ('animations', 'character', 'prompts'):
+    for k in ('animations', 'character', 'prompts', 'sounds'):
         if k in raw_settings:
             if type(raw_settings[k]) is not bool:
                 raise ValueError('设置开关格式无效')
