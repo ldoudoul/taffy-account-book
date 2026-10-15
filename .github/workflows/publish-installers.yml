@@ -2,13 +2,13 @@ name: Publish Windows and Android installers
 
 on:
   push:
-    tags: [v1.1.1]
+    tags: [v1.2.0]
 
 permissions:
   contents: read
 
 concurrency:
-  group: installers-v1.1.1
+  group: installers-v1.2.0
   cancel-in-progress: false
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/distribution/1.1.1"
-          for ASSET in taffy-account-book-1.1.1-windows-x64-setup.exe taffy-account-book-1.1.1-android.apk SHA256SUMS.txt release-notes.md; do
+          BASE="https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/distribution/1.2.0"
+          for ASSET in taffy-account-book-1.2.0-windows-x64-setup.exe taffy-account-book-1.2.0-android.apk SHA256SUMS.txt release-notes.md; do
             curl --fail --location --retry 3 --output "$ASSET" "$BASE/$ASSET"
           done
           sha256sum --check SHA256SUMS.txt
@@ -34,12 +34,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if gh release view v1.1.1 >/dev/null 2>&1; then
+          if gh release view v1.2.0 >/dev/null 2>&1; then
             echo 'Release already exists; refusing to replace existing assets.'
             exit 1
           fi
-          gh release create v1.1.1 \
-            taffy-account-book-1.1.1-windows-x64-setup.exe \
-            taffy-account-book-1.1.1-android.apk SHA256SUMS.txt \
-            --verify-tag --title '永雏塔菲记账本 1.1.1 · Windows 与 Android' \
+          gh release create v1.2.0 \
+            taffy-account-book-1.2.0-windows-x64-setup.exe \
+            taffy-account-book-1.2.0-android.apk SHA256SUMS.txt \
+            --verify-tag --title '永雏塔菲记账本 1.2.0 · Windows 与 Android' \
             --notes-file release-notes.md --latest

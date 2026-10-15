@@ -16,13 +16,13 @@
 
 ## Windows 与 Android 下载
 
-**[下载 Windows 安装包 1.2.0（约21.3 MiB）](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/taffy-account-book-1.2.0-windows-x64-setup.exe)**
+**[下载 Windows 安装包 1.2.0（约21.3 MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/taffy-account-book-1.2.0-windows-x64-setup.exe)**
 
-**[下载 Android APK 1.2.0（约7.3 MiB）](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/taffy-account-book-1.2.0-android.apk)**
+**[下载 Android APK 1.2.0（约7.3 MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/taffy-account-book-1.2.0-android.apk)**
 
-[SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/SHA256SUMS.txt) · [历史 Release](https://github.com/ldoudoul/taffy-account-book/releases)
+[SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/SHA256SUMS.txt) · [历史 Release](https://github.com/ldoudoul/taffy-account-book/releases)
 
-新版文件位于 v1.2.0 标签下的 distribution/1.2.0 目录。Android 包已签名并校验，Android 真机安装与音效听感未验收。仓库中旧版 PDF 保留原版本记录，新功能以版本说明为准。
+新版文件位于公开 Release v1.2.0，并保留 v1.2.0 标签下的 distribution/1.2.0 备份。Android 包已签名并校验，Android 真机安装与音效听感未验收。仓库中旧版 PDF 保留原版本记录，新功能以版本说明为准。
 
 支持 Windows 10/11 x64。下载后双击安装，从桌面启动；系统需要 WebView2 和 .NET Framework 4.6.2 以上，使用者无需安装Python。详细安装、备份和运行依赖见下方文档。
 
