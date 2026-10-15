@@ -1,0 +1,41 @@
+{
+  "tag": "v1.2.0",
+  "verified": true,
+  "files": [
+    {
+      "name": "taffy-account-book-1.2.0-windows-x64-setup.exe",
+      "bytes": 22355708,
+      "sha256": "6c4b1cc34961dc2a78f7dc3667a7b8f5f68a9ee3eccbe9a4d67d2f555aef52ef",
+      "url": "https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/taffy-account-book-1.2.0-windows-x64-setup.exe"
+    },
+    {
+      "name": "taffy-account-book-1.2.0-android.apk",
+      "bytes": 7669580,
+      "sha256": "02dc839ca0bf1b999c67afd64d72e7d015b42756e01bcc7a0d3e79ee63c02b28",
+      "url": "https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/taffy-account-book-1.2.0-android.apk"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 216,
+      "sha256": "5b584d59995cf8acc9ee371c5903007f7b902f3bde50c5133ae396eb4f037a7d",
+      "url": "https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/SHA256SUMS.txt"
+    }
+  ],
+  "installation": {
+    "version": "1.2.0",
+    "latestRelease": "https://github.com/ldoudoul/taffy-account-book/releases/tag/v1.2.0",
+    "oldUninstallerExit": 0,
+    "downloadedInstallerExit": 0,
+    "WebView2Ready": true,
+    "installedBytes": 41489199,
+    "installedMiB": 39.57,
+    "accountDataModifiedByTests": false,
+    "androidDeviceTested": false
+  },
+  "installedResourceCheck": {
+    "interaction.js": true,
+    "refinement.css": true,
+    "sw.js": true,
+    "actionAtlasHashEqual": true
+  }
+}
