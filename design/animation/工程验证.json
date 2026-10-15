@@ -1,5 +1,5 @@
 {
-  "aepBytes": 865130,
+  "aepBytes": 865548,
   "signature": "RIFX",
   "renderedPreviews": [
     "abacus-预览.png",
@@ -12,5 +12,6 @@
   "sourceAssets": [
     "taffy-actions.png",
     "taffy-expressions.png"
-  ]
+  ],
+  "consolidatedFolder": true
 }
