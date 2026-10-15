@@ -11,8 +11,6 @@
 新增六种人物短动画：抱金币与星星眼、猫耳轻摆、拨算盘、翻账本、量卡尺、按计算器。先选择状态，再点击塔菲；约2.2秒后恢复原预算表情，350ms柔和切换。人物腰线固定在卡片底部，移除钱包状态。
 
 - [1.2.0 动画与验收记录](docs/1.2.0-人物动画版.md)
-- [两端图标说明](docs/1.1.1-图标更新.md)
-- [五个区块任务文档](docs/tasks/)
 
 ## Windows 与 Android 下载
 
@@ -22,7 +20,7 @@
 
 [SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.2.0/SHA256SUMS.txt) · [历史 Release](https://github.com/ldoudoul/taffy-account-book/releases)
 
-新版文件位于公开 Release v1.2.0，并保留 v1.2.0 标签下的 distribution/1.2.0 备份。Android 包已签名并校验，Android 真机安装与音效听感未验收。仓库中旧版 PDF 保留原版本记录，新功能以版本说明为准。
+新版文件位于公开 Release v1.2.0，并保留 v1.2.0 标签下的 distribution/1.2.0 备份。Android 包已签名并校验，Android 真机安装与音效听感未验收。最新版 PDF 及完整单文件源码见 submission/1.2.0。
 
 支持 Windows 10/11 x64。下载后双击安装，从桌面启动；系统需要 WebView2 和 .NET Framework 4.6.2 以上，使用者无需安装Python。详细安装、备份和运行依赖见下方文档。
 
@@ -147,3 +145,12 @@ Android 首版 APK 约 2.7 MiB，编译、v2/v3 签名、对齐、实际打包�
 ## 授权说明
 
 本项目尚未指定开源许可证。人物素材和第三方组件的权利分别保留，发布源码不自动授予人物素材的商业使用权。详细说明见 [授权说明](LICENSE.md)。
+
+
+## 最新作业交付（1.2.0）
+
+[五个作业文件](submission/1.2.0/)保留示例原文件名：README.pdf、AI_Prompts_Log.pdf、Project_Requirements_and_Design.pdf、turing_machine.py、turing_machine.exe。需求设计的分工表按提供内容填写。单文件 PY 包含完整桌面源码和界面资源，可使用 --self-check、--demo 或 --extract；Windows GUI 依赖 pywebview==6.2.1。
+
+[AE 可编辑动画工程和素材](design/animation/) · [完整桌面源码](desktop/源码/) · [Android 源码](android/源码/)
+
+公开安装包见 Release v1.2.0，安装包校验与运行限制见版本说明。本地构建工具、Android签名材料和用户账本不在本仓库中。

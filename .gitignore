@@ -45,3 +45,6 @@ webview/
 
 !distribution/1.2.0/*.exe
 !distribution/1.2.0/*.apk
+
+本地构建资料/
+!submission/1.2.0/turing_machine.exe
