@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "kind": "coin",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    },
+    {
+      "kind": "paw",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    },
+    {
+      "kind": "abacus",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    },
+    {
+      "kind": "book",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    },
+    {
+      "kind": "caliper",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    },
+    {
+      "kind": "calculator",
+      "framesSampled": 8,
+      "bottomGapMax": 0,
+      "reset": true
+    }
+  ],
+  "continuity": {
+    "before": "matrix(1, 0, -0.0207276, 1, 0, 0)",
+    "after": "matrix(1, 0, -0.0207275, 1, 0, 0)"
+  },
+  "rapidClicks": 20,
+  "activeAnimations": 4,
+  "reducedMotion": true,
+  "mobileLayout": true,
+  "errors": []
+}

@@ -6,24 +6,23 @@
 
 > 首版为本地优先：手机、浏览器和 Windows 的账本独立，不自动同步。跨端转移使用 JSON 备份。
 
-## interactivity 分支进度 · 1.1.1
+## interactivity 分支进度 · 1.2.0
 
-已完成白粉界面升级、四种上半身表情、七种道具互动、可关闭合成音效，以及 Windows/Android/PWA 原图图标更新。16 项 Python 测试、Python/JS 一致性及浏览器互动检查通过；新版 EXE/APK 已构建并提供 Release 下载。安卓真机与音效听感尚待验收。
+新增六种人物短动画：抱金币与星星眼、猫耳轻摆、拨算盘、翻账本、量卡尺、按计算器。先选择状态，再点击塔菲；约2.2秒后恢复原预算表情，350ms柔和切换。人物腰线固定在卡片底部，移除钱包状态。
 
-- [界面与互动升级说明](docs/1.1.0-界面互动升级.md)
-- [两端图标更新说明](docs/1.1.1-图标更新.md)
-- [安装包及图标校验记录](docs/1.1.1-安装包校验.json)
-- [五个区块的任务进度](docs/tasks/)
-
-本分支源码版本为 **1.1.1**；下方公开 Release 提供 **1.1.1** Windows 与 Android 安装包。旧版三份 PDF 为 1.0.0 资料，新增 Markdown 记录新版变更。
+- [1.2.0 动画与验收记录](docs/1.2.0-人物动画版.md)
+- [两端图标说明](docs/1.1.1-图标更新.md)
+- [五个区块任务文档](docs/tasks/)
 
 ## Windows 与 Android 下载
 
-**[下载 Windows .exe 安装包（1.1.1，约18.87MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/taffy-account-book-1.1.1-windows-x64-setup.exe)**
+**[下载 Windows 安装包 1.2.0（约21.3 MiB）](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/taffy-account-book-1.2.0-windows-x64-setup.exe)**
 
-**[下载安卓 .apk 安装包（1.1.1，约5.02MiB）](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/taffy-account-book-1.1.1-android.apk)**
+**[下载 Android APK 1.2.0（约7.3 MiB）](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/taffy-account-book-1.2.0-android.apk)**
 
-[发布页与全部下载文件](https://github.com/ldoudoul/taffy-account-book/releases/latest) · [SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/releases/download/v1.1.1/SHA256SUMS.txt)
+[SHA256 校验文件](https://github.com/ldoudoul/taffy-account-book/raw/refs/tags/v1.2.0/distribution/1.2.0/SHA256SUMS.txt) · [历史 Release](https://github.com/ldoudoul/taffy-account-book/releases)
+
+新版文件位于 v1.2.0 标签下的 distribution/1.2.0 目录。Android 包已签名并校验，Android 真机安装与音效听感未验收。仓库中旧版 PDF 保留原版本记录，新功能以版本说明为准。
 
 支持 Windows 10/11 x64。下载后双击安装，从桌面启动；系统需要 WebView2 和 .NET Framework 4.6.2 以上，使用者无需安装Python。详细安装、备份和运行依赖见下方文档。
 

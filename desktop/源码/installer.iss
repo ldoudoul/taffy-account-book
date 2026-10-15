@@ -1,5 +1,5 @@
 #define AppName "记账喵"
-#define AppVersion "1.1.1"
+#define AppVersion "1.2.0"
 
 [Setup]
 AppId={{8C406B51-488A-4350-859B-82AFA80EA111}
@@ -13,12 +13,12 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir=..\安装包
-OutputBaseFilename=记账喵-1.1.1-Windows-x64-安装
+OutputBaseFilename=记账喵-1.2.0-Windows-x64-安装
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
 DisableProgramGroupPage=yes
-UninstallDisplayIcon={app}\MeowLedger.exe
+UninstallDisplayIcon={app}\taffy-desktop.ico
 SetupIconFile=dist\assets\app.ico
 CloseApplications=yes
 RestartApplications=no
@@ -34,9 +34,11 @@ Name: "desktopicon"; Description: "创建桌面快捷方式"; GroupDescription: 
 Source: "..\构建产物\MeowLedger\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\文档\*.pdf"; DestDir: "{app}\文档"; Flags: ignoreversion
 
+Source: "dist\assets\app.ico"; DestDir: "{app}"; DestName: "taffy-desktop.ico"; Flags: ignoreversion
+
 [Icons]
-Name: "{autoprograms}\{#AppName}"; Filename: "{app}\MeowLedger.exe"
-Name: "{userdesktop}\{#AppName}"; Filename: "{app}\MeowLedger.exe"; Tasks: desktopicon
+Name: "{autoprograms}\{#AppName}"; Filename: "{app}\MeowLedger.exe"; IconFilename: "{app}\taffy-desktop.ico"; IconIndex: 0
+Name: "{userdesktop}\{#AppName}"; Filename: "{app}\MeowLedger.exe"; IconFilename: "{app}\taffy-desktop.ico"; IconIndex: 0; Tasks: desktopicon
 Name: "{autoprograms}\卸载{#AppName}"; Filename: "{uninstallexe}"
 
 [Run]
@@ -48,4 +50,3 @@ begin
   if CurUninstallStep = usUninstall then
     RegDeleteValue(HKCU, 'Software\Microsoft\Windows\CurrentVersion\Run', 'MeowLedger');
 end;
-

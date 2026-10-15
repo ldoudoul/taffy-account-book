@@ -56,7 +56,7 @@ def main():
         run([JDK / 'bin/keytool.exe', '-genkeypair', '-keystore', key, '-alias', 'meowledger',
              '-storepass:file', password, '-keypass:file', password, '-keyalg', 'RSA', '-keysize', '2048',
              '-validity', '10000', '-dname', 'CN=Meow Ledger, O=Meow Ledger Project, C=CN', '-noprompt'])
-    apk = BUILD / 'MeowLedger-1.1.1.apk'
+    apk = BUILD / 'MeowLedger-1.2.0.apk'
     run([JDK / 'bin/java.exe', '-jar', SDK / 'lib/apksigner.jar', 'sign', '--ks', key,
          '--ks-key-alias', 'meowledger', '--ks-pass', 'file:' + str(password),
          '--v1-signing-enabled', 'true', '--v2-signing-enabled', 'true', '--v3-signing-enabled', 'true',
@@ -64,8 +64,8 @@ def main():
     verify = subprocess.run([str(JDK / 'bin/java.exe'), '-jar', str(SDK / 'lib/apksigner.jar'),
                              'verify', '--verbose', '--print-certs', str(apk)], check=True, env=ENV, capture_output=True, text=True)
     (ROOT / '验证/签名验证.txt').write_text(verify.stdout, encoding='utf-8')
-    run([SDK / 'zipalign.exe', '-c', '-p', '4', 'build/MeowLedger-1.1.1.apk'])
-    destination = ROOT / '安装包/记账喵-1.1.1-Android.apk'
+    run([SDK / 'zipalign.exe', '-c', '-p', '4', 'build/MeowLedger-1.2.0.apk'])
+    destination = ROOT / '安装包/记账喵-1.2.0-Android.apk'
     destination.parent.mkdir(exist_ok=True)
     shutil.copyfile(apk, destination)
     report = {'apk': destination.name, 'bytes': apk.stat().st_size, 'MiB': round(apk.stat().st_size / 1048576, 2),

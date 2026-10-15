@@ -1,5 +1,5 @@
-const CACHE='meow-ledger-v1.1.1';
-const ASSETS=['./interaction.js','./refinement.css','./assets/taffy-expressions.png','./','./index.html','./style.css','./app.js','./engine.js','./decorations.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-192.png','./assets/icon-512.png','./assets/companion.png','./assets/decor-1.jpg','./assets/decor-2.jpg','./assets/decor-3.jpg','./assets/decor-4.jpg','./assets/decor-5.jpg'];
+const CACHE='meow-ledger-v1.2.0';
+const ASSETS=['./assets/taffy-actions.png','./interaction.js','./refinement.css','./assets/taffy-expressions.png','./','./index.html','./style.css','./app.js','./engine.js','./decorations.js','./manifest.webmanifest','./assets/icon.svg','./assets/icon-192.png','./assets/icon-512.png','./assets/companion.png','./assets/decor-1.jpg','./assets/decor-2.jpg','./assets/decor-3.jpg','./assets/decor-4.jpg','./assets/decor-5.jpg'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
